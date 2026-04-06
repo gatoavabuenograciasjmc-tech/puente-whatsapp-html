@@ -4,17 +4,25 @@
   <meta charset="UTF-8" />
   <title>Redirigiendo a WhatsApp…</title>
 
+  <!-- Meta Pixel -->
   <script>
     !function(f,b,e,v,n,t,s){
-      if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
+      if(f.fbq)return;n=f.fbq=function(){
+        n.callMethod ? n.callMethod.apply(n,arguments) : n.queue.push(arguments)
+      };
+      if(!f._fbq)f._fbq=n;
+      n.push=n;
+      n.loaded=!0;
+      n.version='2.0';
+      n.queue=[];
+      t=b.createElement(e);
+      t.async=!0;
+      t.src=v;
+      s=b.getElementsByTagName(e)[0];
       s.parentNode.insertBefore(t,s)
     }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
-    fbq('init', '1515966293431253');  
+    fbq('init', '1515966293431253');  // Tu Pixel real
     fbq('track', 'Contact');
   </script>
 </head>
@@ -22,10 +30,12 @@
 <body>
   <h2>Abriendo WhatsApp…</h2>
 
+  <!-- Redirección a WhatsApp -->
   <script>
     setTimeout(function () {
-      window.location.href = "https://wa.me/525571473883"; 
-    }, 1200);
+      // Número en formato internacional sin + ni espacios
+      window.location.href = "https://wa.me/525571473883";
+    }, 1200);  // 1.2 segundos antes de abrir WhatsApp
   </script>
 </body>
 </html>
